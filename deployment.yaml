@@ -5,7 +5,7 @@ metadata:
   name: metric-secret
 type: Opaque
 data:
-  NEXT_PUBLIC_SERVER_URL: wpZodHRwOi8vbG9jYWxob3N0OjMxMDAwCg== # Replace with your server URL base64
+  NEXT_PUBLIC_SERVER_URL: aHR0cDovL2xvY2FsaG9zdDozMTAwMA== # Replace with your server URL base64
 ---
 #deployment
 apiVersion: apps/v1
