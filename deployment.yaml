@@ -1,12 +1,3 @@
-# secrets
-apiVersion: v1
-kind: Secret
-metadata:  
-  name: metric-secret
-type: Opaque
-data:
-  NEXT_PUBLIC_SERVER_URL: aHR0cDovL21ldHJpYy1iYWNrZW5kLXNlcnZpY2U= # Replace with your server URL base64
----
 #deployment
 apiVersion: apps/v1
 kind: Deployment
@@ -26,10 +17,7 @@ spec:
           image: harmanpreet27/metric-frontend
           env:
             - name: NEXT_PUBLIC_SERVER_URL
-              valueFrom:
-                secretKeyRef:
-                  name: metric-secret
-                  key: NEXT_PUBLIC_SERVER_URL
+              value: "http://localhost:4000"
 ---
 #service
 apiVersion: v1
